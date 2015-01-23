@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: transporter-demo-app
+
+  jackson:
+    mapper:
+      default-view-inclusion: true
+
+server:
+  port: 8181
+
+transporterService:
+  ribbon:
+    NIWSServerListClassName: com.netflix.niws.loadbalancer.DiscoveryEnabledNIWSServerList
+    DeploymentContextBasedVipAddresses: transporter-service
+
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    region: default
+    registerWithEureka: false
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8000/eureka/

@@ -1,0 +1,13 @@
+# Generic ignores
+*.iml
+*.log*
+.project
+.settings
+.classpath
+.idea
+*.ipr
+target
+nb-configuration.xml
+RecentChanges
+build
+.gradle

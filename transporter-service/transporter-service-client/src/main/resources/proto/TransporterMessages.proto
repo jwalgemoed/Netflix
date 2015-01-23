@@ -1,0 +1,12 @@
+package com.bol.proto;
+
+// Transporter representation
+message Transporter {
+  required string code = 1;
+  required string name = 2;
+}
+
+// Wrapper to wrap a list of transporters
+message Transporters {
+  repeated Transporter transporters = 1;
+}

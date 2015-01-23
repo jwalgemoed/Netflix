@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: transporter-service
+
+server:
+  port: 1010
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 15
+
+    metadataMap:
+      instanceId: ${server.port}
+
+  client:
+
+    registerWithEureka: true
+    fetchRegistry: false
+
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8000/eureka

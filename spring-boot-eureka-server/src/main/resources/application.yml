@@ -1,0 +1,34 @@
+# Application name
+spring:
+  application:
+    name: eureka-server
+
+# Server port
+server:
+  port: 8000
+
+# Server configuration
+eureka:
+  hostname: localhost
+  virtualHostName: ${spring.application.name}
+  nonsecurePort: ${server.port}
+
+  # Set the refresh interval for clients, and the lease expiration time
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 15
+
+  # Client configuration - configure this instance to register with itself
+  client:
+    region: default
+    registerWithEureka: true
+    fetchRegistry: false
+
+    # The Eureka service URL (now loopback) used for peer-to-peer communication
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+
+  # Disable selfpreservation to allow instances to time out (useful in single instance mode)
+  server:
+    enableSelfPreservation: false
+
