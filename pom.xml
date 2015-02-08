@@ -5,8 +5,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.bol</groupId>
-    <artifactId>transporter-service</artifactId>
-    <name>Transporter Service</name>
+    <artifactId>NetflixDemos</artifactId>
+    <name>Netflix Demo Projects</name>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
