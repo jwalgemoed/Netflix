@@ -9,6 +9,9 @@
     <name>Netflix Demo Projects</name>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <description>
+             Simple root pom for building all the netflix demos
+    </description>
 
     <modules>
         <module>spring-boot-eureka-server</module>
